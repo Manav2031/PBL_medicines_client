@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
 
+import MedDashboard from "./pages/MedDashboard"
 function App() {
   return (
     <div className="App">
-      
+      <MedDashboard />
     </div>
   );
 }
