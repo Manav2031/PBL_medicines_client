@@ -4,7 +4,7 @@ import MedData from "../components/meddata.jsx";
 function MedDashboard()
 {
     return (
-        <div>
+        <div className="contacts">
             <MedData 
                 name="Paracetamol"
                 description="Used in fever"
