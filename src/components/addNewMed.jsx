@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function AddMed(){
+export default function AddMed(){
     const {med}=useState({
         name:" ",
         quantitY:" ",
@@ -13,3 +13,4 @@ function AddMed(){
         </div>
     )
 }
+
