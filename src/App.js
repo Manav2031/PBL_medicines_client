@@ -3,7 +3,7 @@ import MedDashboard from "./pages/MedDashboard"
 function App() {
   return (
     <div className="App">
-      <AddMedPage />
+      <MedDashboard />
     </div>
   );
 }

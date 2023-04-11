@@ -9,7 +9,6 @@ body {
     align-items: center;
     font-family: 'Inter', sans-serif;
     background-color: whitesmoke;
-    /* background-image: url("https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
     background-repeat: no-repeat;
     height: 100%;
     background-position: center;
@@ -44,4 +43,23 @@ body {
 
 .med-color {
     color: red;
+}
+
+.available
+{
+    background-color: green;
+}
+
+
+.contacts::before {
+    content: '';
+    background: url('https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') 
+        no-repeat center center/cover;
+    position: absolute;
+    opacity: 0.3;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
