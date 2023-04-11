@@ -3,7 +3,7 @@ import React from "react";
 export default function Status()
 {
     const available=false;
-    if(available==true) {
+    if(available===true) {
     return (
         <div>
             <Available />

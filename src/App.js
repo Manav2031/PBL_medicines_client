@@ -4,7 +4,7 @@ import Status from "./pages/statusPage";
 function App() {
   return (
     <div className="App">
-      <Status />
+      <MedDashboard />
     </div>
   );
 }
