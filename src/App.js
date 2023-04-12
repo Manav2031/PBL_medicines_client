@@ -1,11 +1,17 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import AddMedPage from "./pages/addMedPage";
-import MedDashboard from "./pages/MedDashboard"
+import MedDashboard from "./pages/MedDashboard";
 import Status from "./pages/statusPage";
 function App() {
   return (
-    <div className="App">
-      <MedDashboard />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<MedDashboard />} />
+        <Route path='/addmed' element={<AddMedPage />} />
+        <Route path='/status' element={<Status />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
