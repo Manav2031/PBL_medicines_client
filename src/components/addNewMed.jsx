@@ -61,10 +61,25 @@ export default function AddMed(){
         //        </form>
             
         // </div>
-        <Form>
+        <Form className="lovw">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Medicine Name</Form.Label>
-        <Form.Control type="email" placeholder="Enter name" />
+        <Form.Control type="text" placeholder="Enter name" className="tish"/>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Quantity</Form.Label>
+        <Form.Control type="number" placeholder="Enter quantity" />
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Description</Form.Label>
+        <Form.Control type="text" placeholder="Enter description of the text" />
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Expiration date</Form.Label>
+        <Form.Control type="date" placeholder="Enter date of expiry." />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">

@@ -173,3 +173,25 @@ body {
 span {
     margin-left: 16px;
 }
+.mb-3{
+    color: black;
+}
+.tish:focus {
+    border: 3px solid #555;
+    width: 100%;
+    transition: width 0.4s ease-in-out;
+
+   
+
+  }
+  input[type=date]:focus {
+    border: 3px solid #555;
+  }
+  
+  
+.lovw{
+    background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-chinese-medical-day-simple-blue-doctors-picture-image_925616.jpg");
+}
+.tish{
+    width:50%;
+}
