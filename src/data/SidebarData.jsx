@@ -4,6 +4,8 @@ import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 import * as BsIcons from "react-icons/bs";
 import * as MdIcons from "react-icons/md";
+import * as GiIcons from "react-icons/gi";
+import * as GrIcons from "react-icons/gr";
 
 export const SidebarData = [
     {
@@ -16,19 +18,19 @@ export const SidebarData = [
     {
         title: 'Med Dashboard',
         path: '/meddashboard',
-        icon: <MdIcons.MdLogin />,
+        icon: <GiIcons.GiMedicines/>,
         cName: 'nav-text'
     },
     {
         title: 'Status',
         path: '/status',
-        icon: <MdIcons.MdLogin />,
+        icon: <GrIcons.GrStatusGood />,
         cName: 'nav-text'
     },
     {
         title: 'Add Med',
         path: '/addmed',
-        icon: <MdIcons.MdLogin />,
+        icon: <IoIcons.IoIosAddCircleOutline />,
         cName: 'nav-text'
     },
     
