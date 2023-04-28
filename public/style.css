@@ -39,7 +39,7 @@ body {
 
 .available
 {
-    background-color: green;
+    background-color: white;
     text-align: center;
 
 }
@@ -65,13 +65,11 @@ body {
 
 .container{
     align-items: center;
-        background-image: url("https://i.pinimg.com/originals/c0/88/af/c088afd95289a07e6d07c415765cea80.jpg");
-        background-size: cover;
-        height: 100%;
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-        min-height: 100vh;
+        background-image: url("https://bst.icons8.com/wp-content/uploads/2020/03/medical-clipart-icons-healthcare.jpg");
+       
+         background-position: center;
+         /* background-size: cover;
+        min-height: 100vh;  */
         display: flex;
       
 }
@@ -210,4 +208,7 @@ span {
 }
 .lish{
     width:50%;
+}
+.hi{
+    display: flex;
 }
