@@ -184,8 +184,15 @@ span {
    
 
   }
-  input[type=date]:focus {
+  /* input[type=date]:focus {
     border: 3px solid #555;
+    width: 100%;
+    transition: width 0.4s ease-in-out;
+  } */
+  input[type=number]:focus {
+    border: 3px solid #555;
+    width: 100%;
+    transition: width 0.4s ease-in-out;
   }
   
   
@@ -193,5 +200,14 @@ span {
     background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-chinese-medical-day-simple-blue-doctors-picture-image_925616.jpg");
 }
 .tish{
+    width:50%;
+}
+.fish{
+    width:50%;
+}
+.pish{
+    width:50%;
+}
+.lish{
     width:50%;
 }
