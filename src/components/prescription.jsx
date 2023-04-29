@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-export default function Prescription() {
+export default function Prescription(props) {
     const [details,setDetails] = useState({
         name:"",
         doctor:"",
@@ -12,7 +12,7 @@ export default function Prescription() {
     const [medicine,setMedicine] = useState({
         name:"",
         frequency:0,
-        days:0,
+        days:0
     })
 
 
@@ -37,9 +37,13 @@ export default function Prescription() {
     }
 
     function handleSubmit(event) {
-        event.preventDefault()
-        console.log(details)
-        console.log(medicine)
+        props.onAdd(medicine);
+        setMedicine({
+            name: "",
+            frequency:0,
+            days:0
+        })
+        event.preventDefault();
     }
 
     return (
