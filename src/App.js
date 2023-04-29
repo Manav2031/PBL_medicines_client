@@ -6,6 +6,7 @@ import Status from "./pages/statusPage";
 import Navbar from "./components/navbar";
 import Home from "./pages/homePage";
 import Consent from './pages/consentPage';
+import PrescriptionPage from "./pages/prescriptionPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/addmed' element={<AddMedPage />} />
         <Route path='/status' element={<Status />} />
         <Route path='/consent' element={<Consent />} />
+        <Route path='/prescriptionpage' element={<PrescriptionPage />} />
       </Routes>
     </BrowserRouter>
   );
