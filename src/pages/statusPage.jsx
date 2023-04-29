@@ -40,7 +40,7 @@ function Available()
   const toggleShow = () => setBasicModal(!basicModal);
     return (
       <>
-      <section className="vh-100" style={{ backgroundColor: "#35558a" }}>
+      <section className="vh-100" style={{ backgroundColor: "aquamarine" }}>
         <MDBContainer className="py-5 h-100">
           <MDBRow className="justify-content-center align-items-center h-100 text-center">
             <MDBCol>

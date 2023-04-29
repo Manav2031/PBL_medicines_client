@@ -68,10 +68,11 @@ body {
         background-image: url("https://bst.icons8.com/wp-content/uploads/2020/03/medical-clipart-icons-healthcare.jpg");
        
          background-position: center;
-         /* background-size: cover;
-        min-height: 100vh;  */
+          background-size: cover;
+          width: 100%;
+        min-height: 100vh;  
         display: flex;
-      
+      color: aquamarine;
 }
 
 .med-color {
