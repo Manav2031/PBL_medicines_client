@@ -5,6 +5,8 @@ import MedDashboard from "./pages/MedDashboard";
 import Status from "./pages/statusPage";
 import Navbar from "./components/navbar";
 import Home from "./pages/homePage";
+import Consent from './pages/consentPage';
+
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +16,7 @@ function App() {
         <Route path='/meddashboard' element={<MedDashboard />} />
         <Route path='/addmed' element={<AddMedPage />} />
         <Route path='/status' element={<Status />} />
+        <Route path='/consent' element={<Consent />} />
       </Routes>
     </BrowserRouter>
   );

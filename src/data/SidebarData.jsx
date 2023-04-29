@@ -33,6 +33,12 @@ export const SidebarData = [
         icon: <IoIcons.IoIosAddCircleOutline />,
         cName: 'nav-text'
     },
+    {
+        title: 'Consent',
+        path: '/consent',
+        icon: <IoIcons.IoIosAddCircleOutline />,
+        cName: 'nav-text'
+    },
     
 ]
 
