@@ -2,12 +2,12 @@ import React,{useState, useContext} from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import {Link} from "react-router-dom";
-import {loggedInDoctorData, SidebarData} from "../data/SidebarData";
+import {loggedInMedicalData, SidebarData} from "../data/SidebarData";
 import {IconContext} from "react-icons";
 import {UserContext} from "../App";
 
 
-function Navbar () {
+function NavbarMedical () {
     const {state, dispatch} = useContext(UserContext);
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
@@ -15,7 +15,7 @@ function Navbar () {
         if(state) {
             return (
                 <>
-                {loggedInDoctorData.map((item,index)=> {
+                {loggedInMedicalData.map((item,index)=> {
                             return (
                                 <li key={index} className={item.cName}>
                                     <Link to={item.path}>
@@ -68,4 +68,4 @@ function Navbar () {
     )
 }
 
-export default Navbar;
+export default NavbarMedical;
