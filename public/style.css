@@ -65,18 +65,17 @@ body {
 
 .container{
     align-items: center;
-        background-image: url("https://bst.icons8.com/wp-content/uploads/2020/03/medical-clipart-icons-healthcare.jpg");
-       
-         background-position: center;
-          background-size: cover;
-          width: 100%;
-        min-height: 100vh;  
-        display: flex;
-      color: aquamarine;
+    background-image: url("https://www.clipartkey.com/mpngs/m/243-2434520_hospital-animated-patient-gif.png");
+    height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .med-color {
-    color: red;
+    color: rgb(0, 153, 255);
 }
 .name{
     
@@ -211,5 +210,9 @@ span {
     width:50%;
 }
 .hi{
+    display: flex;
+}
+.text-start text-black p-4{
+    background-image:url("https://cdn-icons-png.flaticon.com/512/5278/5278681.png");
     display: flex;
 }
