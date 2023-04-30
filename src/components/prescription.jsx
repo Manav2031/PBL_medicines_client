@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 export default function Prescription(props) {
     const [details,setDetails] = useState({
-        name:"",
+        name:"" ,
         doctor:"",
         email:""
     })
@@ -74,7 +74,7 @@ export default function Prescription(props) {
       </Form.Group>
       <Form.Group className="mb-3">
         <Form.Label>Number of times in a day</Form.Label>
-        <Form.Control type="text" placeholder="Enter Frequency" className="tish"  name="frequency"
+        <Form.Control type="text" placeholder="Enter Number of Times" className="tish"  name="frequency"
                 value={medicine.frequency}
                 onChange={handleChange2}/>
       </Form.Group>

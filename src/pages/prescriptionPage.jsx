@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import Prescription from "../components/prescription";
+import Display from "../components/displayprescription";
 
 export default function PrescriptionPage() {
     const [presc,setPresc]=useState([])
@@ -8,20 +9,19 @@ export default function PrescriptionPage() {
             return [...prevValue, prescription]
         })
     }
-    console.log(presc)
     return (
         <div>
         <Prescription onAdd={addMedicine} />
         {presc.map((prescItem, index) => {
-            // return (
-            //     <>
-            //         key={index}
-            //         id={index}
-            //         name={prescItem.name}
-            //         frequency={prescItem.frequency}
-            //         days={prescItem.days}
-            //     </>
-            // );
+            return (
+                <Display
+                    key={index}
+                    id={index}
+                    name={prescItem.name}
+                    frequency={prescItem.frequency}
+                    days={prescItem.days}
+                />
+            );
         })}
         </div>
     )

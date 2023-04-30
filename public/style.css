@@ -216,3 +216,29 @@ span {
     background-image:url("https://cdn-icons-png.flaticon.com/512/5278/5278681.png");
     display: flex;
 }
+
+.note {
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+  }
+  
+  .note h1 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+    background: #ccc;
+    border-radius: 5px;
+  }
+  
+  .note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .display-note {
+    background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-chinese-medical-day-simple-blue-doctors-picture-image_925616.jpg");
+  }
