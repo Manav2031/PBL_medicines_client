@@ -17,7 +17,7 @@ import {
 
 export default function Status()
 {
-    const available=false;
+    const available=true;
     if(available===true) {
     return (
         <div>
