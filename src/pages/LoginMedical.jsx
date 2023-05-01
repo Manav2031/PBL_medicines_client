@@ -28,7 +28,7 @@ function LoginMedical() {
             // Invalid password
             setErrorMessages({ name: "pass", message: errors.pass });
           } else {
-            dispatch({type:"USER", payload:true})
+            dispatch({type:"MEDICAL", payload:true})
             setIsSubmitted(true);
             navigate("/meddashboard");
           }

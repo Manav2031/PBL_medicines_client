@@ -16,8 +16,14 @@ export const SidebarData = [
     },
 
     {
-        title: 'Login',
-        path: '/login',
+        title: 'Login as Doctor',
+        path: '/logindoctor',
+        icon: <MdIcons.MdLogin />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Login as Medical Owner',
+        path: '/loginmedical',
         icon: <MdIcons.MdLogin />,
         cName: 'nav-text'
     },
