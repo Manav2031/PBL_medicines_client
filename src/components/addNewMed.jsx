@@ -21,8 +21,8 @@ export default function AddMed(){
   }
 
   function handleSubmit(event) {
-    console.log(med)
     event.preventDefault()
+    console.log(med)
   }
 
     return(

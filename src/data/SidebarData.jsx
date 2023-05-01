@@ -14,17 +14,28 @@ export const SidebarData = [
         icon: <AiIcons.AiFillHome />,
         cName: 'nav-text'
     },
+
+    {
+        title: 'Login',
+        path: '/login',
+        icon: <MdIcons.MdLogin />,
+        cName: 'nav-text'
+    },
     
+   
+]
+
+export const loggedInMedicalData = [
+    {
+        title: 'Home',
+        path: '/',
+        icon: <AiIcons.AiFillHome />,
+        cName: 'nav-text'
+    },
     {
         title: 'Med Dashboard',
         path: '/meddashboard',
         icon: <GiIcons.GiMedicines/>,
-        cName: 'nav-text'
-    },
-    {
-        title: 'Status',
-        path: '/status',
-        icon: <GrIcons.GrStatusGood />,
         cName: 'nav-text'
     },
     {
@@ -39,26 +50,10 @@ export const SidebarData = [
         icon: <IoIcons.IoIosAddCircleOutline />,
         cName: 'nav-text'
     },
-    
-]
-
-export const loggedInData = [
     {
-        title: 'Home',
-        path: '/',
-        icon: <AiIcons.AiFillHome />,
-        cName: 'nav-text'
-    },
-    {
-        title: 'New Chat',
-        path: '/newchat',
-        icon: <BsIcons.BsFillChatDotsFill />,
-        cName: 'nav-text'
-    },
-    {
-        title: 'Chat History',
-        path: '/chathistory',
-        icon: <BsIcons.BsFillChatDotsFill />,
+        title: 'Status',
+        path: '/status',
+        icon: <GrIcons.GrStatusGood />,
         cName: 'nav-text'
     },
     {
@@ -67,4 +62,27 @@ export const loggedInData = [
         icon: <MdIcons.MdLogin />,
         cName: 'nav-text'
     },
+    
+]
+
+export const loggedInDoctorData = [
+    {
+        title: 'Home',
+        path: '/',
+        icon: <AiIcons.AiFillHome />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Prescription',
+        path: '/prescriptionpage',
+        icon: <GrIcons.GrStatusGood />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Logout',
+        path: '/logout',
+        icon: <MdIcons.MdLogin />,
+        cName: 'nav-text'
+    },
+    
 ]
