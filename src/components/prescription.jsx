@@ -48,14 +48,15 @@ export default function Prescription(props) {
     }
 
     function handleSubmit(event) {
-        addMedicine(medicine)
+        setPresc(prevValue => {
+            return [...prevValue, medicine]
+        })
         setMedicine({
             name: "",
             frequency: "",
             days: "",
             quantity:""
         })
-        console.log(presc)
         event.preventDefault();
     }
 
@@ -113,6 +114,7 @@ export default function Prescription(props) {
                 />
             );
         })}
+
     </div>
     )
 }
