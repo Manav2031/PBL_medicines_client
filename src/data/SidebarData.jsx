@@ -51,18 +51,6 @@ export const loggedInMedicalData = [
         cName: 'nav-text'
     },
     {
-        title: 'Consent',
-        path: '/consent',
-        icon: <IoIcons.IoIosAddCircleOutline />,
-        cName: 'nav-text'
-    },
-    {
-        title: 'Status',
-        path: '/status',
-        icon: <GrIcons.GrStatusGood />,
-        cName: 'nav-text'
-    },
-    {
         title: 'Logout',
         path: '/logout',
         icon: <MdIcons.MdLogin />,
