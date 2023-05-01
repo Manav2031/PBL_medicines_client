@@ -23,6 +23,7 @@ function App() {
     <>
     <UserContext.Provider value={{state,dispatch}}>
     <BrowserRouter>
+    {console.log(loggedindoctor)}
     {loggedindoctor ? <Navbar /> : <NavbarMedical />}
       <Routes>
         <Route path='/' element={<Home />} />  
