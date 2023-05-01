@@ -9,12 +9,13 @@ import Status from "./pages/statusPage";
 import Navbar from "./components/navbar";
 import NavbarMedical from "./components/navbarmedical";
 import Home from "./pages/homePage";
-import Login from "./pages/Login";
+import LoginDoctor from "./pages/LoginDoctor";
+import LoginMedical from "./pages/LoginMedical";
 import Consent from './pages/consentPage';
 import PrescriptionPage from "./pages/prescriptionPage";
 import Logout from "./pages/Logout";
 import {initialState, reducer} from "../src/reducer/UseReducer";
-import loggedindoctor from "./components/navbar";
+import {loggedinmedical} from "../src/reducer/UseReducer";
 
 export const UserContext = createContext();
 function App() {
@@ -23,11 +24,11 @@ function App() {
     <>
     <UserContext.Provider value={{state,dispatch}}>
     <BrowserRouter>
-    {console.log(loggedindoctor)}
-    {loggedindoctor ? <Navbar /> : <NavbarMedical />}
-      <Routes>
+    {loggedinmedical ? <NavbarMedical /> : <Navbar />}
+    <Routes>
         <Route path='/' element={<Home />} />  
-        <Route path='/login' element={<Login />} /> 
+        <Route path='/logindoctor' element={<LoginDoctor />} /> 
+        <Route path='/loginmedical' element={<LoginMedical />} />
         <Route path='/meddashboard' element={<MedDashboard />} />
         <Route path='/addmed' element={<AddMedPage />} />
         <Route path='/status' element={<Status />} />
