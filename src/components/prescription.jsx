@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Display from "../components/displayprescription";
+import PrecDetail from "./prescDetails";
 
 export default function Prescription(props) {
     const [details, setDetails] = useState({
@@ -103,6 +104,10 @@ export default function Prescription(props) {
                 Submit
             </Button>
         </Form>
+        <PrecDetail
+            name={details.name}
+            doctor={details.doctor}
+            email={details.email} />
         {presc.map((prescItem, index) => {
             return (
                 <Display
