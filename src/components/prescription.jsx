@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Display from "../components/displayprescription";
 import PrecDetail from "./prescDetails";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Prescription(props) {
     const [details, setDetails] = useState({
@@ -10,12 +12,12 @@ export default function Prescription(props) {
         doctor: "",
         email: ""
     })
-
+    // const id;
     const [medicine, setMedicine] = useState({
         name: "",
-        frequency: "",
-        days: "",
-        quantity: ""
+        frequency: 0,
+        days: 0,
+        quantity: 0
     })
 
     const [presc,setPresc]=useState([])
@@ -54,13 +56,36 @@ export default function Prescription(props) {
         })
         setMedicine({
             name: "",
-            frequency: "",
-            days: "",
-            quantity:""
+            frequency: 0,
+            days: 0,
+            quantity:0
         })
         event.preventDefault();
     }
+    
+    const navigate = useNavigate();
 
+    function handlePresc(event){
+        const pr1={
+            name:details.name,
+            doctor:details.doctor,
+            email:details.email,
+            med:presc
+        }
+        console.log(pr1)
+        axios.post("http://localhost:5000/presc",pr1).then((res)=>{
+            const id=res.data_id;
+            navigate('/status',{
+                        state: {
+                            key: res.data._id
+                        }
+                    })
+            
+        });
+
+        
+        event.preventDefault();
+    }
     return (
         <div>
         <Form className="lovw">
@@ -119,7 +144,9 @@ export default function Prescription(props) {
                 />
             );
         })}
-
+        <Button variant="primary" type="submit" onClick={handlePresc}>
+                Proceed with prescription
+            </Button>
     </div>
     )
 }

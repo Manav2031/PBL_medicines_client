@@ -32,7 +32,7 @@ function App() {
         <Route path='/meddashboard' element={<MedDashboard />} />
         <Route path='/addmed' element={<AddMedPage />} />
         <Route path='/status' element={<Status />} />
-        <Route path='/consent' element={<Consent />} />
+        <Route path='/consent/:id' element={<Consent />} />
         <Route path='/prescriptionpage' element={<PrescriptionPage />} />
         <Route path='/logout' element={<Logout />} />
       </Routes>
