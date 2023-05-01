@@ -6,7 +6,7 @@ import {loggedInDoctorData, SidebarData} from "../data/SidebarData";
 import {IconContext} from "react-icons";
 import {UserContext} from "../App";
 
-
+export var loggedindoctor=false;
 function Navbar () {
     const {state, dispatch} = useContext(UserContext);
     const [sidebar, setSidebar] = useState(false);
@@ -15,6 +15,7 @@ function Navbar () {
         if(state) {
             return (
                 <>
+                {loggedindoctor=true}
                 {loggedInDoctorData.map((item,index)=> {
                             return (
                                 <li key={index} className={item.cName}>
