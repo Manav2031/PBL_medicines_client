@@ -49,7 +49,7 @@ function Consent() {
             </button>
             <PrecDetail name={presc.name} doctor={presc.doctor} email={presc.email} />
             {med.map((item) => {
-                <Display name={item.name} frequency={item.frequency} days={item.days} />
+                return(<Display name={item.name} frequency={item.frequency} days={item.days} />)
             })}
         </center>
 
