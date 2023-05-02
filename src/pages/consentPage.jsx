@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 function Consent() {
     const params = useParams()
-
+    const navigate=useNavigate()
     function handleYes() {
         console.log(params)
         const id = params.id;
@@ -14,13 +14,19 @@ function Consent() {
             })
         })
     }
+
+    function handleNo(){
+        console.log("NO")
+        navigate('/');
+    }
+
     return (<div className="a">
         <center>
             <pre>
                 Do you want to confirm and proceed <br /> with the prescription?
             </pre>
             <button className="abc" onClick={handleYes}>Yes, I want to proceed</button>
-            <button className="xyz">No
+            <button className="xyz" onClick={handleNo}>No
                 <span className="popup">If you don't want to proceed, you can consider taking screenshot of the prescription</span>
             </button>
 

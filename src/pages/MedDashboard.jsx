@@ -1,38 +1,38 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import MedData from "../components/meddata.jsx";
+import axios from "axios";
 
 function MedDashboard()
 {
+    const [list, setList] = useState([]);
+
+    useEffect(() => {
+        retrieveList()
+    }, [])
+
+    function retrieveList() {
+        axios.get("http://localhost:5000/med")
+            .then((res) => {
+                setList(res.data)
+                console.log(list);
+            }).catch((err) => {
+                console.log(err);
+            })
+    }
     return (
         <div className="contacts">
-            <MedData 
-                name="Paracetamol"
-                description="Used in fever"
-                expirydate="2023-06-05"
-                quantity={300}
-                purchasedate="2023-03-07"
-                price={150}
-
-            />
-            <MedData
-                name="Dolo-650"
-                description="Used in Covid-19"
-                expirydate="2024-06-02"
-                quantity={500}
-                purchasedate="2023-03-07"
-                price={200}
-
-            />
-            <MedData
-                name="Gelusil"
-                description="Acidity"
-                expirydate="2025-06-05"
-                quantity={800}
-                purchasedate="2023-03-07"
-                price={250}
-
-            />
-
+            {list.map((item)=>{
+                return(<MedData 
+                    name={item.name}
+                    description={item.description}
+                    expirydate={item.exp_date}
+                    quantity={item.quantity}
+                    purchasedate={item.purchase_date}
+                    price={item.price}
+    
+                />)
+            })}
+            
         </div>
     )
 }

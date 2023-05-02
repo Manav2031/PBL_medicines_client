@@ -60,7 +60,6 @@ function Available() {
       console.log(res.data)
       axios.post('http://localhost:5000/mail',res.data).then((res1)=>console.log(res1.data))
     })
-
   }
   const [basicModal, setBasicModal] = useState(false);
 
@@ -130,11 +129,11 @@ function NotAvailable() {
   const [basicModal, setBasicModal] = useState(false);
 
   function handleSubmit() {
-    if (available === false) {
-      axios.get('http://localhost:5000/presc/' + id).then((res) => {
-        console.log(res.data)
-      })
-    }
+    console.log(id)
+    axios.get('http://localhost:5000/presc/'+id).then((res)=>{
+      console.log(res.data)
+      axios.post('http://localhost:5000/mail/notAvail',res.data).then((res1)=>console.log(res1.data))
+    })
   }
 
   const toggleShow = () => setBasicModal(!basicModal);

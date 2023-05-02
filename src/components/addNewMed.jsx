@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import axios from 'axios';
 export default function AddMed(){
     const [med,setMed]=useState({
         name:"",
@@ -21,8 +22,11 @@ export default function AddMed(){
   }
 
   function handleSubmit(event) {
-    event.preventDefault()
     console.log(med)
+    axios.post('http://localhost:5000/med/',med).then((res)=>{
+      console.log(res.data);
+    })
+    event.preventDefault()
   }
 
     return(
