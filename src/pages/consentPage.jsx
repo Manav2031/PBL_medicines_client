@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+
+import Display from "../components/displayprescription";
+import PrecDetail from "../components/prescDetails";
+
+
+
 function Consent() {
     const params = useParams()
-    const navigate=useNavigate()
+    const navigate = useNavigate()
+    const [presc, setPresc] = useState({})
+    const [med, setMed] = useState([])
+
+    useEffect(() => {
+        const id = params.id;
+        axios.get('http://localhost:5000/presc/' + id).then((res) => {
+            setPresc(res.data);
+            setMed(res.data.med)
+
+        })
+    })
+
     function handleYes() {
         console.log(params)
         const id = params.id;
@@ -15,7 +33,7 @@ function Consent() {
         })
     }
 
-    function handleNo(){
+    function handleNo() {
         console.log("NO")
         navigate('/');
     }
@@ -29,8 +47,14 @@ function Consent() {
             <button className="xyz" onClick={handleNo}>No
                 <span className="popup">If you don't want to proceed, you can consider taking screenshot of the prescription</span>
             </button>
-
+            <PrecDetail name={presc.name} doctor={presc.doctor} email={presc.email} />
+            {med.map((item) => {
+                <Display name={item.name} frequency={item.frequency} days={item.days} />
+            })}
         </center>
+
+
+
     </div>);
 }
 
