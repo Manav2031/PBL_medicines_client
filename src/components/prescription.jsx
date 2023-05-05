@@ -125,9 +125,13 @@ export default function Prescription(props) {
                     value={medicine.days}
                     onChange={handleChange2} />
             </Form.Group>
+            <div className="container1">
+                <div className="container2">
             <Button variant="primary" type="submit" onClick={handleSubmit}>
                 Submit
             </Button>
+            </div>
+            </div>
         </Form>
         <PrecDetail
             name={details.name}
