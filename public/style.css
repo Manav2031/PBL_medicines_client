@@ -56,7 +56,6 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    overflow: scroll;
 }
 
 .notavailable {
@@ -73,7 +72,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: scroll;
 }
 
 .med-color {
@@ -198,7 +196,10 @@ span {
   
 .lovw{
     background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-chinese-medical-day-simple-blue-doctors-picture-image_925616.jpg");
-    overflow: scroll;
+    padding-left: 1%;
+    padding-top: 1%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 .tish{
     width:50%;
@@ -218,7 +219,6 @@ span {
 .text-start text-black p-4{
     background-image:url("https://cdn-icons-png.flaticon.com/512/5278/5278681.png");
     display: flex;
-    overflow: scroll;
 }
 
 .note {
@@ -245,7 +245,7 @@ span {
 
   .display-note {
     background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-chinese-medical-day-simple-blue-doctors-picture-image_925616.jpg");
-    overflow: scroll;
+    
   }
 
   input[type="checkbox"] {
@@ -447,7 +447,6 @@ textarea {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  overflow: scroll;
 }
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
@@ -647,8 +646,8 @@ body {
 }
 
 .container1 {
-  height: 200px;
   position: relative;
+  height: 150px;
 }
 
 .container2 {

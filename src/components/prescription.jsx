@@ -148,9 +148,13 @@ export default function Prescription(props) {
                 />
             );
         })}
+        <div className="container1">
+            <div className="container2">
         <Button variant="primary" type="submit" onClick={handlePresc}>
                 Proceed with prescription
             </Button>
+            </div>
+            </div>
     </div>
     )
 }
