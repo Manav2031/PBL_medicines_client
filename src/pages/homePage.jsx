@@ -8,8 +8,9 @@ export default function Home() {
         <main>
         <div class="intro">
           <h1>THE MED PORTAL</h1>
-          <p>A medicine supply chain optimization project.</p>
-          {/* <button>Learn More</button> */}
+          <p>A medicine supply chain optimization<br></br> <span class="gh">project</span></p>
+          <button>GET STARTED</button>
+        
         </div>
         <div class="achievements">
           <div class="work">
