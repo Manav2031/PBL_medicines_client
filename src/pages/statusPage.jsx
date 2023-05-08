@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,useRef} from "react";
 import Button from 'react-bootstrap/Button';
 import axios from "axios";
 import { useLocation } from "react-router-dom";
@@ -17,10 +17,10 @@ import {
   MDBTypography,
 } from "mdb-react-ui-kit";
 
-var available;
 var id;
 
 export default function Status() {
+  const available=useRef(true);
   const request = useLocation();
   useEffect(() => {
     id = request.state.key;
@@ -28,16 +28,16 @@ export default function Status() {
     axios.get('http://localhost:5000/presc/' + id).then((res) => {
         console.log(res.data)
         axios.post("http://localhost:5000/check", res.data).then((res) => {
-      console.log(res.data.availability);
-      available=res.data.availability
-    })
+        available.current=res.data.availability
+        })
       })
+      
+    })
     
-  })
-
-
-
-  if (available === true) {
+    
+    
+  console.log("Status :"+available.current);
+  if (available.current === true) {
     return (
       <div>
         <Available />
