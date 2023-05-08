@@ -20,7 +20,7 @@ import {
 var id;
 
 export default function Status() {
-  const available=useRef(true);
+  const available=useRef(false);
   const request = useLocation();
   useEffect(() => {
     id = request.state.key;
