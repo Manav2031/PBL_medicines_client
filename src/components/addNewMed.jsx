@@ -7,7 +7,9 @@ export default function AddMed(){
         name:"",
         quantity:0,
         exp_date:"",
-        price:0
+        price:0,
+        batchID:"",
+        manufacturer:""
     })
 
 
@@ -26,6 +28,7 @@ export default function AddMed(){
     axios.post('http://localhost:5000/med/',med).then((res)=>{
       console.log(res.data);
     })
+    console.log(med)
     event.preventDefault()
   }
 
@@ -55,6 +58,25 @@ export default function AddMed(){
         <Form.Control type="date" placeholder="Enter date of expiry" className="pish" name="exp_date"
         value={med.exp_date} onChange={handleChange} />
       </Form.Group>
+      <div className='verify'>
+        <div>
+          <Form.Group className="mb-3">
+            <Form.Label>Medicine manufacturer</Form.Label>
+            <Form.Control type="text" placeholder="Enter name" className="tish"  name="manufacturer"
+                    value={med.manufacturer}
+                    onChange={handleChange}/>
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>batchID</Form.Label>
+            <Form.Control type="text" placeholder="Enter batchID" className="tish"  name="batchID"
+                    value={med.batchID}
+                    onChange={handleChange}/>
+          </Form.Group>
+          </div>
+      <Button variant="primary" type="submit" onClick={handleSubmit}>
+        Verify
+      </Button></div>
       <Button variant="primary" type="submit" onClick={handleSubmit}>
         Submit
       </Button>

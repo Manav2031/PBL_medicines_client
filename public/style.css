@@ -729,3 +729,10 @@ background: -moz-linear-gradient(135deg, hsla(183, 38%, 48%, 1) 17%, hsla(159, 3
 background: -webkit-linear-gradient(135deg, hsla(183, 38%, 48%, 1) 17%, hsla(159, 35%, 16%, 1) 95%);
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4CA7AB", endColorstr="#1A362C", GradientType=1 );
+}
+.verify{
+  background-color: aliceblue;
+  margin-left:1%;
+  padding:10px;
+  border-radius: 10px;
+}
