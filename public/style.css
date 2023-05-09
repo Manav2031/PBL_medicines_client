@@ -577,13 +577,22 @@ body {
 }
 
 .achievements {
+  background-color: #31afb3;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 40px 80px;
+  flex-basis: content;
+}
+.achievements .work1
+{
+  padding:10%;
+  background-color: #27898c;
+  justify-content: center;
 }
 
 .achievements .work {
+  background-color:#37bcc1;
   display: flex;
   flex-direction: column;
   justify-content: center;
