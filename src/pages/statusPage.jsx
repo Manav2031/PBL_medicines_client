@@ -20,19 +20,19 @@ import {
 var id;
 
 export default function Status() {
-  const available=useRef(false);
+  const available=useRef(true);
   const request = useLocation();
-  useEffect(() => {
-    id = request.state.key;
-    console.log(id)
-    axios.get('http://localhost:5000/presc/' + id).then((res) => {
-        console.log(res.data)
-        axios.post("http://localhost:5000/check", res.data).then((res) => {
-        available.current=res.data.availability
-        })
-      })
+  // useEffect(() => {
+  //   id = request.state.key;
+  //   console.log(id)
+  //   axios.get('http://localhost:5000/presc/' + id).then((res) => {
+  //       console.log(res.data)
+  //       axios.post("http://localhost:5000/check", res.data).then((res) => {
+  //       available.current=res.data.availability
+  //       })
+  //     })
       
-    })
+  //   })
     
     
     

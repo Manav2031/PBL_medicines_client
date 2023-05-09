@@ -65,13 +65,24 @@ body {
 
 .container{
     align-items: center;
-    background-image: url("https://www.clipartkey.com/mpngs/m/243-2434520_hospital-animated-patient-gif.png");
+    /* background-image: url("https://www.clipartkey.com/mpngs/m/243-2434520_hospital-animated-patient-gif.png"); */
     height: 100%;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,108,108,1) 35%, rgba(0,212,255,1) 100%);
 
   /* Center and scale the image nicely */
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat; */
+  background-size: 100% 100%;
+  background: hsla(183, 38%, 48%, 1);
+
+  background: linear-gradient(135deg, hsla(183, 38%, 48%, 1) 17%, hsla(159, 35%, 16%, 1) 95%);
+  
+  background: -moz-linear-gradient(135deg, hsla(183, 38%, 48%, 1) 17%, hsla(159, 35%, 16%, 1) 95%);
+  
+  background: -webkit-linear-gradient(135deg, hsla(183, 38%, 48%, 1) 17%, hsla(159, 35%, 16%, 1) 95%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4CA7AB", endColorstr="#1A362C", GradientType=1 )
 }
 
 .med-color {
@@ -697,3 +708,15 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.vh-100{
+  /* 
+   */
+   background: hsla(183, 38%, 48%, 1);
+
+background: linear-gradient(135deg, hsla(183, 38%, 48%, 1) 17%, hsla(159, 35%, 16%, 1) 95%);
+
+background: -moz-linear-gradient(135deg, hsla(183, 38%, 48%, 1) 17%, hsla(159, 35%, 16%, 1) 95%);
+
+background: -webkit-linear-gradient(135deg, hsla(183, 38%, 48%, 1) 17%, hsla(159, 35%, 16%, 1) 95%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4CA7AB", endColorstr="#1A362C", GradientType=1 );
