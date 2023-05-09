@@ -32,6 +32,19 @@ export default function AddMed(){
     event.preventDefault()
   }
 
+  function handleVerify(){
+    const contractAbi = [ ]; // Insert your contract's ABI here
+    const contractAddress = '0x1234567890123456789012345678901234567890'; // Insert your contract's address here
+
+const contract = new web3.eth.Contract(contractAbi, contractAddress);
+
+const newValue = 42;
+
+contract.methods.setValue(newValue).send()
+  .then(() => console.log("Value set successfully"))
+  .catch(error => console.error(error));
+  }
+
     return(
         <Form className="lovw">
       <Form.Group className="mb-3">
@@ -74,7 +87,7 @@ export default function AddMed(){
                     onChange={handleChange}/>
           </Form.Group>
           </div>
-      <Button variant="primary" type="submit" onClick={handleSubmit}>
+      <Button variant="primary" type="submit" onClick={handleVerify}>
         Verify
       </Button></div>
       <Button variant="primary" type="submit" onClick={handleSubmit}>
