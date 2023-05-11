@@ -1,6 +1,11 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
+  function handleClick() {
+    navigate("/logindoctor");
+  }
     return (
         // <div>
         //     <h1> Home </h1>
@@ -9,7 +14,7 @@ export default function Home() {
         <div class="intro">
           <h1>THE MED PORTAL</h1>
           <p>A medicine supply chain optimization<br></br> <span class="gh">project</span></p>
-          <button>GET STARTED</button>
+          <button onClick={handleClick}>GET STARTED</button>
         
         </div>
         <div class="achievements">
