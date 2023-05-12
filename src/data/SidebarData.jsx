@@ -1,11 +1,9 @@
 import React from "react";
-import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 import * as BsIcons from "react-icons/bs";
 import * as MdIcons from "react-icons/md";
 import * as GiIcons from "react-icons/gi";
-import * as GrIcons from "react-icons/gr";
 
 export const SidebarData = [
     {
@@ -22,7 +20,7 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Login as Medical Owner',
+        title: 'Login as Medical',
         path: '/loginmedical',
         icon: <MdIcons.MdLogin />,
         cName: 'nav-text'
@@ -69,7 +67,7 @@ export const loggedInDoctorData = [
     {
         title: 'Prescription',
         path: '/prescriptionpage',
-        icon: <GrIcons.GrStatusGood />,
+        icon: <BsIcons.BsPrescription />,
         cName: 'nav-text'
     },
     {
