@@ -116,12 +116,14 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,108,108,1) 35%, rgb
     display: flex;
     justify-content: start;
     align-items: center;
+    
 }
 
 .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
     background: none;
+  
 }
 
 .nav-menu {
@@ -134,6 +136,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,108,108,1) 35%, rgb
     top: 0;
     left: -100%;
     transition: 850ms;
+    z-index: 100;
 }
 
 .nav-menu.active {
@@ -826,7 +829,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
   padding: 15px;
 }
 @keyframes tipsy {
-  0 {
+  0% {
     transform: translateX(-50%) translateY(-50%) rotate(0deg);
   }
   100% {
@@ -862,6 +865,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
   left: 30%;
   transform: translateX(-50%) translateY(-50%);
   word-spacing: 30px;
+  
   /* background: -webkit-linear-gradient(#eee, #333); */
   
   
@@ -872,7 +876,7 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
   content: '';
   padding: .9em .4em;
   position: absolute;
-  left: 42%;
+  left: 41%;
   width: 28%;
   top: 50%;
   display: block;
@@ -889,4 +893,65 @@ border: 1px solid rgba(255, 255, 255, 0.3); */
 .intro h1:after {
   border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
   box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
+}
+
+/* about_us */
+body {
+  background: #eee;
+}
+
+.name {
+  color: blue;
+}
+
+.work {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.about span {
+  font-size: 13px;
+}
+
+.v-profile {
+  color: blue;
+  cursor: pointer;
+}
+
+.box {
+  -webkit-box-shadow: 13px 12px 5px -10px rgba(196,194,196,0.72);
+  -moz-box-shadow: 13px 12px 5px -10px rgba(196,194,196,0.72);
+  box-shadow: 13px 12px 5px -10px rgba(196,194,196,0.72);
+}
+
+.col-md-3 {
+  margin-top: 10px;
+  width:20%;
+}
+
+
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.social-link:hover, .social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}
+
+.mb-0
+{
+  padding: 10px;
+  font-weight: 650px;
+  color: white;
 }
