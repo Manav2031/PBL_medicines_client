@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import Web3 from 'web3';
 export default function AddMed(){
     const [med,setMed]=useState({
         name:"",
@@ -32,18 +33,18 @@ export default function AddMed(){
     event.preventDefault()
   }
 
-  function handleVerify(){
+  const handleVerify=async()=>{
     const contractAbi = [ ]; // Insert your contract's ABI here
     const contractAddress = '0x1234567890123456789012345678901234567890'; // Insert your contract's address here
+    const web3 = new Web3(Web3.givenProvider);
+    const contract = await web3.eth.Contract(contractAbi, contractAddress);
 
-const contract = new web3.eth.Contract(contractAbi, contractAddress);
+    const newValue = 42;
 
-const newValue = 42;
-
-contract.methods.setValue(newValue).send()
-  .then(() => console.log("Value set successfully"))
-  .catch(error => console.error(error));
-  }
+    contract.methods.setValue(newValue).send()
+      .then(() => console.log("Value set successfully"))
+      .catch(error => console.error(error));
+    }
 
     return(
         <Form className="lovw">
