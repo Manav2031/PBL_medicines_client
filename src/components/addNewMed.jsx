@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import Web3 from 'web3';
+import Contract from "../contract/constractABI.json"
 export default function AddMed(){
     const [med,setMed]=useState({
         name:"",
@@ -11,7 +13,9 @@ export default function AddMed(){
         batchID:"",
         manufacturer:""
     })
-
+    useEffect(()=>{
+      
+    })
 
     function handleChange(event) {
       const { name, value } = event.target;
@@ -32,18 +36,32 @@ export default function AddMed(){
     event.preventDefault()
   }
 
-  function handleVerify(){
-    const contractAbi = [ ]; // Insert your contract's ABI here
-    const contractAddress = '0x1234567890123456789012345678901234567890'; // Insert your contract's address here
+  const handleVerify=async(event)=>{
+    const contractAbi = Contract.abi; // Insert your contract's ABI here
+    const contractAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138'; // Insert your contract's address here
+    const web3 = new Web3(Web3.givenProvider);
+    // const provider = window.ethereum;
+    // contract.setProvider(web3.currentProvider);
+    const contract = await new web3.eth.Contract(contractAbi, contractAddress);
+    if (typeof window.ethereum !== 'undefined') {
+      // Provider is available
+      // Your code to instantiate web3 and connect to the provider
+      console.log("provider set")
+    } else {
+      // Provider is not available
+      // Handle the case where the user doesn't have a provider installed or enabled
+      console.log("provider NOT set")
+    }
 
-const contract = new web3.eth.Contract(contractAbi, contractAddress);
+    
+    // contract.methods.getBatchDetails(med.batchID)
+    // .call()
+    //   // .send({from:' 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4'})
+    //   .then((res) => console.log(res))
+    //   .catch(error => console.error(error));
 
-const newValue = 42;
-
-contract.methods.setValue(newValue).send()
-  .then(() => console.log("Value set successfully"))
-  .catch(error => console.error(error));
-  }
+      event.preventDefault()
+    }
 
     return(
         <Form className="lovw">
