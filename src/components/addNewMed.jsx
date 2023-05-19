@@ -36,29 +36,187 @@ export default function AddMed(){
     event.preventDefault()
   }
 
-  const handleVerify=async(event)=>{
-    const contractAbi = Contract.abi; // Insert your contract's ABI here
-    const contractAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138'; // Insert your contract's address here
+  function stringToBytes32(string) {
+    // Pad the string if necessary
+    let paddedString = string;
+    while (paddedString.length < 32) {
+      paddedString += '\0';
+    }
+  
+    // Convert the string to bytes32
+    const bytes32Value = Buffer.from(paddedString, 'utf8');
+  
+    return bytes32Value;
+  }
+
+  async function handleVerify(event)
+  {
+    event.preventDefault()
+    const contractAbi = [
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "_batchId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_quantity",
+            "type": "uint256"
+          }
+        ],
+        "name": "addBatch",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "bytes32",
+            "name": "batchId",
+            "type": "bytes32"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "manufacturer",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "quantity",
+            "type": "uint256"
+          }
+        ],
+        "name": "NewBatchAdded",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "name": "batches",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "manufacturer",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "quantity",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "name": "batchIds",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "_batchId",
+            "type": "bytes32"
+          }
+        ],
+        "name": "getBatchDetails",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "_batchId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "_manufacturer",
+            "type": "address"
+          }
+        ],
+        "name": "verifyBatch",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ]; // Insert your contract's ABI here
+    const contractAddress = '0x99B5997E173D9Bd0cF9D071988DAfb6644f2f892'; // Insert your contract's address here
     const web3 = new Web3(Web3.givenProvider);
     // const provider = window.ethereum;
     // contract.setProvider(web3.currentProvider);
+    // console.log(stringToBytes32(med.batchID))
     const contract = await new web3.eth.Contract(contractAbi, contractAddress);
-    if (typeof window.ethereum !== 'undefined') {
-      // Provider is available
-      // Your code to instantiate web3 and connect to the provider
-      console.log("provider set")
-    } else {
-      // Provider is not available
-      // Handle the case where the user doesn't have a provider installed or enabled
-      console.log("provider NOT set")
-    }
-
     
-    // contract.methods.getBatchDetails(med.batchID)
-    // .call()
-    //   // .send({from:' 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4'})
-    //   .then((res) => console.log(res))
-    //   .catch(error => console.error(error));
+    contract.methods.getBatchDetails(med.batchID)
+      .send({from:'0x277E98450938C7751f656852040B41A6213ab82e'})
+      .then(res => console.log(res))
+      .catch(error => console.error(error));
 
       event.preventDefault()
     }
