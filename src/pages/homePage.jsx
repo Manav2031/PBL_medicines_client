@@ -61,35 +61,8 @@ export default function Home() {
         </Card.Footer>
       </Card>
     </CardGroup>
-        {/* <div class="achievements">
-          <div class="work1">
-            <h2>KEY FEATURES</h2>
-          </div>
-          <div class="work">
-          
-            <i class="fas fa-atom"></i>
-            
-            <p class="work-heading">CREATE DIGITAL PRESCRIPTION</p>
-            <p class="work-text">Doctors can create digital prescription to save patient records online</p>
-          </div>
-          <div class="work">
-            <i class="fas fa-skiing"></i>
-            <p class="work-heading">IMMEDIATE ORDER-PLACING</p>
-            <p class="work-text">Through the saved prescriptions, order can be directly placed through our website </p>
-          </div>
-          <div class="work">
-            <i class="fas fa-ethernet"></i>
-            <p class="work-heading">VERIFY COUNTER-FEITING</p>
-            <p class="work-text">Verify authenticity of drugs using blockchain</p>
-          </div>
-        </div> */}
-        {/* <div class="about-me">
-          <div class="about-me-text">
-            <h2>ABOUT US</h2>
-            
-          </div>
-        
-        </div> */}
+    
+    {/* meet the team */}
         <div class="container text-center mt-5 mb-2">
         <h3 class="mb-0">MEET THE TEAM</h3></div>
     <div class="container mt-3">
@@ -162,6 +135,48 @@ export default function Home() {
             </div>
         </div>
     </div>
+
+    <footer class="footer">
+  <div class="footer-left col-md-4 col-sm-6">
+    <p class="about">
+      <span> About the Project</span> When the patient is admitted to the hospital,the doctor enters the prescription into the database onto the website. This data is checked in accordance with the current stock of the in-house medical store. In case the prescribed drug is currently unavailable in the in-house medical store, the website directs the user to the nearest medical store.Now if the medicine is available in the in-house store then we use Blockchain technology to check the authenticity of the drug.It tells us if the drug is sourced from a legitimate manufacturer or not. 
+Thus making the supply chain very transparent and reliable.
+    </p>
+    <div class="icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-google-plus"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+  <div class="footer-center col-md-4 col-sm-6">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p>PICT,Pune</p>
+    </div>
+    <div>
+      <i class="fa fa-phone"></i>
+      <p> (+00) 0000 000 000</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="#"> office@company.com</a></p>
+    </div>
+  </div>
+  <div class="footer-right col-md-4 col-sm-6">
+    <h2> Company<span> logo</span></h2>
+    <p class="menu">
+      <a href="#"> Home</a> |
+      <a href="#"> About</a> |
+      <a href="#"> Services</a> |
+      <a href="#"> Portfolio</a> |
+      <a href="#"> News</a> |
+      <a href="#"> Contact</a>
+    </p>
+    <p class="name"> Company Name &copy; 2016</p>
+  </div>
+</footer>
       </main>
      
     )
