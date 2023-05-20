@@ -207,14 +207,27 @@ export default function AddMed(){
       }
     ]; // Insert your contract's ABI here
     const contractAddress = '0x99B5997E173D9Bd0cF9D071988DAfb6644f2f892'; // Insert your contract's address here
-    const web3 = new Web3(Web3.givenProvider);
+    const web3 = new Web3('https://rpc2.sepolia.org/'); // Replace with the actual RPC server URL
     // const provider = window.ethereum;
     // contract.setProvider(web3.currentProvider);
     // console.log(stringToBytes32(med.batchID))
+
+    // const passphrase = 'YourPassphrase'; // Replace with the passphrase for the account
+    // const unlockDuration = 300; // Optional: Replace with the desired unlock duration in seconds
+
+    // web3.eth.personal.unlockAccount(senderAddress, passphrase, unlockDuration)
+    //   .then(() => {
+    //     console.log('account unlocked')
+    //   })
+    //   .catch(error => {
+    //     console.error('Error unlocking account:', error);
+    //   });
+
     const contract = await new web3.eth.Contract(contractAbi, contractAddress);
     
-    contract.methods.getBatchDetails(med.batchID)
-      .send({from:'0x277E98450938C7751f656852040B41A6213ab82e'})
+    contract.methods.verifyBatch(med.batchID,'0x277E98450938C7751f656852040B41A6213ab82e')
+      // .send({from:'0x277E98450938C7751f656852040B41A6213ab82e'})
+      .call()
       .then(res => console.log(res))
       .catch(error => console.error(error));
 
