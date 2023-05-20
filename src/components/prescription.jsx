@@ -133,6 +133,7 @@ export default function Prescription(props) {
             </div>
             </div>
         </Form>
+        <br></br><br></br>
         <PrecDetail
             name={details.name}
             doctor={details.doctor}
