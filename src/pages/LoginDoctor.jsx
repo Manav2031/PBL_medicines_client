@@ -150,7 +150,7 @@ function LoginDoctor() {
       const renderForm = (
         <div className="wrapper">
           <div className="logo">
-            <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt=""></img>
+            <img src="https://images2.imgbox.com/e4/b4/H10WmipC_o.png" alt=""></img>
           </div>
           <div className="text-center mt-4 name">
             DOCTOR LOGIN
