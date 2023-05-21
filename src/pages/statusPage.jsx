@@ -1,7 +1,7 @@
 import React, { useEffect, useState ,useRef} from "react";
 import Button from 'react-bootstrap/Button';
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   MDBBtn,
   MDBCol,
@@ -54,11 +54,14 @@ export default function Status() {
 }
 
 function Available() {
+  const navigate=useNavigate();
   function handleSubmit() {
     console.log(id)
     axios.get('http://localhost:5000/presc/'+id).then((res)=>{
       console.log(res.data)
       axios.post('http://localhost:5000/mail',res.data).then((res1)=>console.log(res1.data))
+      alert("Consent Request Sent")
+      navigate("/");
     })
   }
   const [basicModal, setBasicModal] = useState(false);
@@ -127,12 +130,14 @@ function Available() {
 
 function NotAvailable() {
   const [basicModal, setBasicModal] = useState(false);
-
+  const navigate=useNavigate();
   function handleSubmit() {
     console.log(id)
     axios.get('http://localhost:5000/presc/'+id).then((res)=>{
       console.log(res.data)
       axios.post('http://localhost:5000/mail/notAvail',res.data).then((res1)=>console.log(res1.data))
+      alert("Prescription Emailed")
+      navigate("/");
     })
   }
 
