@@ -6,7 +6,10 @@ import Web3 from 'web3';
 import { Buffer } from 'buffer';
 import Contract from "../contract/constractABI.json"
 import { ethers } from "ethers";
+import { batches } from '../contract/contractCall';
+import { useNavigate } from 'react-router-dom';
 export default function AddMed(){
+  const navigate=useNavigate();
     const [med,setMed]=useState({
         name:"",
         quantity:0,
@@ -217,12 +220,19 @@ export default function AddMed(){
     const contract = await new web3.eth.Contract(contractAbi, contractAddress);
     
     // contract.methods.verifyBatch(med.batchID,'0x277E98450938C7751f656852040B41A6213ab82e')
-    contract.methods.verifyBatch(stringToBytes32(med.batchID),'0x277E98450938C7751f656852040B41A6213ab82e')
+    contract.methods.verifyBatch(med.batchID,'0x277E98450938C7751f656852040B41A6213ab82e')
       .call({from:'0x277E98450938C7751f656852040B41A6213ab82e'})
       // .call()
       .then(res => console.log(res))
       .catch(error => console.error(error));
-
+    if(batches.includes(med.batchID)){
+      console.log("Verified")
+      alert("Medicines are authentic");
+    }else{
+      console.log("Counterfeited")
+      alert("Counterfeited medicines")
+      navigate('/MedDashboard');
+    }
       
     }
 
