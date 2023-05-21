@@ -31,8 +31,7 @@ function MedDashboard()
                     price={item.price}
     
                 />)
-            })}
-            
+            })}            
         </div>
     )
 }

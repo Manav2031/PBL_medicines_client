@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import Web3 from 'web3';
+import { Buffer } from 'buffer';
 import Contract from "../contract/constractABI.json"
 import { ethers } from "ethers";
 export default function AddMed(){
@@ -38,10 +39,11 @@ export default function AddMed(){
   function stringToBytes32(string) {
     // Pad the string if necessary
     let paddedString = string;
+    console.log(paddedString.length)
     while (paddedString.length < 32) {
       paddedString += '\0';
     }
-  
+    console.log(paddedString.length)
     // Convert the string to bytes32
     const bytes32Value = Buffer.from(paddedString, 'utf8');
   
@@ -215,7 +217,7 @@ export default function AddMed(){
     const contract = await new web3.eth.Contract(contractAbi, contractAddress);
     
     // contract.methods.verifyBatch(med.batchID,'0x277E98450938C7751f656852040B41A6213ab82e')
-    contract.methods.verifyBatch(med.batchID,'0x277E98450938C7751f656852040B41A6213ab82e')
+    contract.methods.verifyBatch(stringToBytes32(med.batchID),'0x277E98450938C7751f656852040B41A6213ab82e')
       .call({from:'0x277E98450938C7751f656852040B41A6213ab82e'})
       // .call()
       .then(res => console.log(res))
