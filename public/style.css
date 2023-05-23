@@ -54,7 +54,7 @@ body {
     top: 0px;
     left: 0px;
     width: 100vw;
-    height: 1200vh;
+    height: 100%;
     z-index: -1;
 }
 
@@ -213,7 +213,8 @@ span {
   
   
 .lovw{
-    background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-chinese-medical-day-simple-blue-doctors-picture-image_925616.jpg");
+    /* background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-chinese-medical-day-simple-blue-doctors-picture-image_925616.jpg"); */
+    background-color: #198486;
     padding-left: 1%;
     padding-top: 1%;
     background-size: 100% 100%;
@@ -683,7 +684,7 @@ background: -webkit-linear-gradient(135deg, hsla(183, 38%, 48%, 1) 17%, hsla(159
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4CA7AB", endColorstr="#1A362C", GradientType=1 );
 }
 .verify{
-  background-color: aliceblue;
+  
   margin-left:1%;
   padding:10px;
   border-radius: 10px;
@@ -865,6 +866,7 @@ body {
 .col-md-3 {
   margin-top: 10px;
   width:20%;
+  height:600px;
 }
 
 
@@ -903,6 +905,7 @@ body {
   font-size: 16px;
   padding: 50px;
   margin-top: 50px;
+  
 }
 
 .footer .footer-left,
@@ -1242,3 +1245,5 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 	outline: none;
 	border-bottom-color: #6A679E;
 }
+
+/* add med page css */

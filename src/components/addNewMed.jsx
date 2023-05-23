@@ -237,6 +237,7 @@ export default function AddMed(){
     }
 
     return(
+   
         <Form className="lovw">
       <Form.Group className="mb-3">
         <Form.Label>Medicine Name</Form.Label>
@@ -285,5 +286,6 @@ export default function AddMed(){
         Submit
       </Button>
     </Form>
+   
     )
 }
