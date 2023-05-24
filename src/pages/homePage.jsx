@@ -191,7 +191,7 @@ Thus making the supply chain very transparent and reliable.
     <br></br>
     <p className="jk"><center>THE MED PORTAL</center></p>
     <p class="menu">
-      <a href="#"> Home</a> |
+      <a href="#"> Home</a> | 
       <a href="#"> About</a> |
       <a href="#"> Key features</a> |
       <a href="#"> Meet the team</a> |
