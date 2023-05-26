@@ -26,7 +26,7 @@ function App() {
     <BrowserRouter>
     {loggedinmedical ? <NavbarMedical /> : <Navbar />}
     <Routes>
-        <Route path='/' element={<Home />} />  
+        <Route default path='/' element={<Home />} />  
         <Route path='/logindoctor' element={<LoginDoctor />} /> 
         <Route path='/loginmedical' element={<LoginMedical />} />
         <Route path='/meddashboard' element={<MedDashboard />} />

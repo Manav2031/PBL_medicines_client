@@ -13,14 +13,14 @@ function Consent() {
     const [presc, setPresc] = useState({})
     const [med, setMed] = useState([])
 
-    // useEffect(() => {
-    //     const id = params.id;
-    //     axios.get('http://localhost:5000/presc/' + id).then((res) => {
-    //         setPresc(res.data);
-    //         setMed(res.data.med)
+    useEffect(() => {
+        const id = params.id;
+        axios.get('http://localhost:5000/presc/' + id).then((res) => {
+            setPresc(res.data);
+            setMed(res.data.med)
 
-    //     })
-    // })
+        })
+    })
 
     function handleYes() {
         console.log(params)

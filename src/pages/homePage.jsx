@@ -9,8 +9,8 @@ import varad from "../assets/Varad Pundlik.png"
 import divyank from "../assets/divyank.jpg"
 import manav from "../assets/Screenshot 2023-05-23 141804.png"
 import disha from "../assets/614867ec-e223-4c02-be49-92b873d8885a.jpg"
-import pict_map from "../assets/pict map.png"
-import { MdColorLens } from "react-icons/md";
+import samiksha from "../assets/WhatsApp Image 2023-05-23 at 3.08.35 PM.jpeg"
+
 export default function Home() {
   const navigate = useNavigate();
   function handleClick() {
@@ -122,7 +122,7 @@ export default function Home() {
                 </div>
             </div>
             <div class="col-md-3" data-aos="fade-down" data-aos-duration="1000">
-                <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle" src="https://i.imgur.com/HFpxxJz.jpg" width="90"></img>
+                <div class="bg-white p-3 text-center rounded box"><img class="img-responsive rounded-circle" src={samiksha} width="90"></img>
                     <h5 class="mt-3 name">SAMIKSHA SARODE</h5><span class="work d-block">21444</span><span class="work d-block">BLOCKCHAIN DEVELOPER</span>
                     {/* <div class="mt-4 about"><span>is a long established fact that eader&nbsp; will be distracted by the readable content.</span></div> */}
                     <div class="mt-4">
@@ -166,14 +166,10 @@ Thus making the supply chain very transparent and reliable.
     </div>
   </div>
   <div class="footer-center col-md-4 col-sm-6">
-    <div className="map">
-    <img src={pict_map}></img>
-    </div>
-    <div className="loc"> 
-    <a href="https://goo.gl/maps/go4ec13VurywdBd89"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-</svg></a>
-      <p>  PICT,Pune</p>
+    <div>
+      
+    <i class="fa fa-map-marker"></i>
+      <p>PICT,Pune</p>
     </div>
     <div>
       <i class="fa fa-phone"></i>
@@ -185,19 +181,16 @@ Thus making the supply chain very transparent and reliable.
     </div>
   </div>
   <div class="footer-right col-md-4 col-sm-6">
-    <div className="logo">
-        <img src="https://images2.imgbox.com/e4/b4/H10WmipC_o.png" alt=""></img>
-    </div>
-    <br></br>
-    <p className="jk"><center>THE MED PORTAL</center></p>
+    <h2>THE MED PORTAL</h2><img src={logo}></img>
     <p class="menu">
-      <a href="#"> Home</a> | 
+      <a href="#"> Home</a> |
       <a href="#"> About</a> |
-      <a href="#"> Key features</a> |
-      <a href="#"> Meet the team</a> |
+      <a href="#"> Services</a> |
+      <a href="#"> Portfolio</a> |
+      <a href="#"> News</a> |
       <a href="#"> Contact</a>
     </p>
-    <p class="name"> Company Name &copy; 2023</p>
+    <p class="name"> Company Name &copy; 2016</p>
   </div>
 </footer>
       </main>

@@ -29,6 +29,7 @@ export default function Status() {
         console.log(res.data)
         axios.post("http://localhost:5000/check", res.data).then((res) => {
         available.current=res.data.availability
+        console.log(available.current)
         })
       })
       
